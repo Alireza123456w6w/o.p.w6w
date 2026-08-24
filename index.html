@@ -596,7 +596,12 @@ if (firebaseReady) {
       });
     } catch (e) {
       console.error(e);
-      err.textContent = e.code === 'auth/email-already-in-use' ? 'این ایمیل قبلاً ثبت شده.' : 'ثبت‌نام ناموفق بود.';
+      err.textContent = e.code === 'auth/email-already-in-use'
+        ? 'این ایمیل قبلاً ثبت شده.'
+        // DEBUG (temporary): shows the real Firebase error code/message on-screen
+        // so it can be read on a phone without opening devtools. Remove the
+        // second line and keep only 'ثبت‌نام ناموفق بود.' once the bug is found.
+        : `ثبت‌نام ناموفق بود. [DEBUG: ${e.code || 'no-code'} — ${e.message || e}]`;
       err.classList.add('show');
     }
   }
