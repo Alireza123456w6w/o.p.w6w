@@ -1,0 +1,8 @@
+{
+  "name": "Offers Pishnahadat",
+  "description": "کانالهای ارتباطی و ارسال پیام به Offers Pishnahadat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

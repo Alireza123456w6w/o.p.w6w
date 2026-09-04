@@ -1,0 +1,13 @@
+{
+  "name": "offers-pishnahadat",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "mkdir -p dist && cp -r index.html 404.html favicon.png avatar.jpg robots.txt assets dist/ 2>/dev/null || true"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
